@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP CONTACT -->
+    <div class="top-contact">
+        <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-bg"></div>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="profile-pic">
+                <img src="images/profile.jpeg" alt="Editor">
+            </div>
+
+            <h1>Jos Viyani</h1>
+
+            <p>
+                Crafting cinematic stories through motion, blending visuals and sound
+                to create engaging and impactful content.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View Work</a>
+                <a href="#about-content" class="btn-outline">About</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+
+        <h2 class="section-title">Featured Work</h2>
+
+        <!-- FILTERS -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="video">Video Editing</button>
+            <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card" data-category="video"
+                onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID')">
+
+                <div class="project-image">
+                    <img src="images/video1.jpeg" alt="Project 1">
+
+                    <div class="project-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>Cinematic Reel</h3>
+                    <p>Video Editing</p>
+                </div>
+
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card" data-category="motion"
+                onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID')">
+
+                <div class="project-image">
+                    <img src="images/video2.jpeg" alt="Project 2">
+
+                    <div class="project-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>Motion Graphics Ad</h3>
+                    <p>Motion Graphics</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about-content" class="about fade-up">
+
+        <div class="about-container">
+
+            <!-- IMAGE -->
+            <div class="about-image">
+                <img src="images/about.jpeg" alt="Editor">
+            </div>
+
+            <!-- CONTENT -->
+            <div class="about-content">
+
+                <h2>About Me</h2>
+
+                <p class="about-text">
+                    A video editor specializing in cinematic storytelling and high-impact visuals.
+                    Focused on delivering engaging content that connects with audiences through
+                    rhythm, emotion, and precision.
+
+                    My editing approach focuses on storytelling first—every cut is intentional.
+                    I prioritize rhythm, clean transitions, and subtle motion to enhance the
+                    narrative without overwhelming it.
+                </p>
+
+                <!-- TOOLS -->
+                <h3>Tools & Software</h3>
+
+                <div class="tools">
+                    <span>Premiere Pro</span>
+                    <span>After Effects</span>
+                    <span>DaVinci Resolve</span>
+                    <span>Photoshop</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STYLE -->
+    <section class="style">
+
+        <h2 class="section-title">Editing Approach</h2>
+
+        <div class="style-container">
+
+            <div class="style-card">
+                <h3>Story First</h3>
+                <p>
+                    Every edit is driven by narrative.
+                    I focus on creating a flow that keeps the audience engaged.
+                </p>
+            </div>
+
+            <div class="style-card">
+                <h3>Rhythm & Timing</h3>
+                <p>
+                    Precise cuts synced with music and visuals
+                    to create smooth and impactful pacing.
+                </p>
+            </div>
+
+            <div class="style-card">
+                <h3>Visual Aesthetics</h3>
+                <p>
+                    Clean transitions, color grading, and motion elements
+                    to enhance the visual experience.
+                </p>
+            </div>
+
+            <div class="style-card">
+                <h3>Sound Design</h3>
+                <p>
+                    Balanced audio, sound effects, and music
+                    to elevate emotional impact.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeVideo()">✕</span>
+
+            <iframe id="videoFrame"
+                src=""
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <div class="contact-container">
+
+            <h2 class="contact-title">Let’s Work Together</h2>
+
+            <p class="contact-subtext">
+                Have a project in mind?
+                Let’s create something impactful together.
+            </p>
+
+            <!-- CONTACT INFO -->
+            <div class="contact-meta">
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    email@example.com
+                </p>
+
+                <p>
+                    <a href="tel:+919074075387">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 9074075387
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- SOCIALS -->
+            <div class="socials">
+
+                <a href="https://www.instagram.com/vyaanee/"
+                    target="_blank">
+
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+
+                </a>
+
+            </div>
+
+            <!-- BUTTON -->
+            <a href="mailto:email@example.com" class="contact-btn">
+                Get in Touch
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Jos Viyani. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
