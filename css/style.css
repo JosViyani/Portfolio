@@ -36,7 +36,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url('../images/hero.jpeg') no-repeat center/cover;
+    background: url('../images/hero2.jpeg') no-repeat center/cover;
     transform: scale(1.1);
     animation: zoomEffect 20s ease-in-out infinite;
      filter: brightness(0.7) contrast(1.1);
