@@ -539,4 +539,23 @@ body {
     color: #E1306C; /* Instagram pink */
 }
 
+@media (max-width: 768px) {
 
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        margin-bottom: 0;
+    }
+
+    .projects {
+        padding-top: 40px;
+    }
+
+}
