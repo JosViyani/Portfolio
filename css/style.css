@@ -297,12 +297,32 @@ body {
     max-width: 900px;
 }
 
+/* NORMAL VIDEOS */
+/* NORMAL VIDEOS */
 .modal iframe {
-    width: 100%;
+    width: 900px;
+    max-width: 90vw;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
+/* SHORTS */
+.modal iframe.short-video {
+    width: 360px;
+    height: 640px;
+}
+@media (max-width: 768px) {
+
+    .modal iframe {
+        width: 95vw;
+        height: 220px;
+    }
+
+    .modal iframe.short-video {
+        width: 90vw;
+        height: 70vh;
+    }
+}
 /* CLOSE BUTTON */
 .close {
     position: absolute;

@@ -27,41 +27,50 @@ function openVideo(url) {
     const modal = document.getElementById("videoModal");
     const frame = document.getElementById("videoFrame");
 
-    if (!modal || !frame) return;
+    // Remove old class
+    frame.classList.remove("short-video");
 
-    // Convert YouTube watch URL to embed URL
+    // ================= NORMAL YOUTUBE =================
     if (url.includes("watch?v=")) {
-        url = url.replace("watch?v=", "embed/");
+
+        url = url.replace(
+            "watch?v=",
+            "embed/"
+        );
     }
 
-    // Autoplay enabled
-    if (!url.includes("?")) {
-        url += "?autoplay=1";
-    } else {
-        url += "&autoplay=1";
+    // ================= YOUTU.BE LINKS =================
+    else if (url.includes("youtu.be/")) {
+
+        const videoId = url.split("youtu.be/")[1];
+
+        url = `https://www.youtube.com/embed/${videoId}`;
     }
 
+    // ================= SHORTS =================
+    else if (url.includes("youtube.com/shorts/")) {
+
+        const videoId = url.split("shorts/")[1];
+
+        url = `https://www.youtube.com/embed/${videoId}`;
+
+        frame.classList.add("short-video");
+    }
+
+    // Load video
     frame.src = url;
 
+    // Open modal
     modal.classList.remove("hidden");
-
-    document.body.style.overflow = "hidden";
-
 }
-
 function closeVideo() {
 
     const modal = document.getElementById("videoModal");
     const frame = document.getElementById("videoFrame");
 
-    if (!modal || !frame) return;
-
     frame.src = "";
 
     modal.classList.add("hidden");
-
-    document.body.style.overflow = "auto";
-
 }
 
 
@@ -145,3 +154,4 @@ animatedElements.forEach(el => {
     observer.observe(el);
 
 });
+
